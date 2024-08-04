@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'UberMove';
+  src: url('/UberMoveText-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'UberMove';
+  src: url('/UberMoveText-Regular.ttf');
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
