@@ -6,28 +6,15 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata = {
   title: "Bald AI - Are You Balding?",
   description: "Find out if you're balding with Bald AI",
-  openGraph: {
-    title: "Bald AI - Are You Balding?",
-    description: "Find out if you're balding with Bald AI",
-    url: "https://www.baldaiapp.com/",
-    images: [
-      {
-        url: "/logo.png",
-        alt: "Bald AI Logo",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Bald AI - Are You Balding?",
-    description: "Find out if you're balding with Bald AI",
-    image: "/logo.png",
-  },
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta property="og:image" content="<generated>" />
+      <meta property="og:image:type" content="<generated>" />
+      <meta property="og:image:width" content="<generated>" />
+      <meta property="og:image:height" content="<generated>" />
       <body className={inter.className}>{children}</body>
     </html>
   )
