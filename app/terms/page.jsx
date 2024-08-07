@@ -4,8 +4,8 @@ const TermsAndConditions = () => {
   return (
     <div className="flex justify-center items-center min-h-screen p-4 bg-black">
       <div className="p-8 rounded-lg shadow-lg w-full max-w-4xl bg-black">
-        <h1 className="text-3xl font-bold mb-4 text-center">Terms and Conditions</h1>
-        <p className="text-gray-200 mb-6 text-center">Last updated: August 05, 2024</p>
+        <h1 className="text-white text-3xl font-bold mb-4 text-center">Terms and Conditions</h1>
+        <p className="text-gray-200 mb-6 text-center">Last updated: August 07, 2024</p>
 
         <h2 className="text-white text-2xl font-semibold mb-2">Interpretation</h2>
         <p className="text-gray-200 mb-8">

@@ -4,8 +4,8 @@ const PrivacyPolicy = () => {
   return (
     <div className="flex justify-center items-center min-h-screen p-4 bg-black">
       <div className="p-8 rounded-lg shadow-lg w-full max-w-4xl bg-black">
-        <h1 className="text-3xl font-bold mb-4 text-center">Privacy Policy</h1>
-        <p className="text-gray-200 mb-6 text-center">Last updated: August 05, 2024</p>
+        <h1 className="text-white text-3xl font-bold mb-4 text-center">Privacy Policy</h1>
+        <p className="text-gray-200 mb-6 text-center">Last updated: August 07, 2024</p>
 
         <p className="text-gray-200 mb-8">
           This Privacy Policy outlines the policies and procedures of Bald AI regarding the collection, use, and
