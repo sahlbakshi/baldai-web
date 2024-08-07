@@ -2,8 +2,8 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="p-8 rounded-lg shadow-lg w-full max-w-4xl">
+    <div className="flex justify-center items-center min-h-screen p-4 bg-black">
+      <div className="p-8 rounded-lg shadow-lg w-full max-w-4xl bg-black">
         <h1 className="text-3xl font-bold mb-4 text-center">Privacy Policy</h1>
         <p className="text-gray-200 mb-6 text-center">Last updated: August 05, 2024</p>
 
@@ -20,14 +20,14 @@ const PrivacyPolicy = () => {
           experience, giving You full control over Your data.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-2">Interpretation</h2>
+        <h2 className="text-white text-2xl font-semibold mb-2">Interpretation</h2>
         <p className="text-gray-200 mb-8">
           Words with capitalized initial letters have specific meanings defined under the following conditions. These
           definitions apply regardless of whether they appear in singular or plural form. The definitions are intended
           to provide clarity and consistency throughout this Privacy Policy.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-2">Definitions</h2>
+        <h2 className="text-white text-2xl font-semibold mb-2">Definitions</h2>
         <p className="text-gray-200 mb-4">For the purposes of this Privacy Policy:</p>
         <ul className="list-disc list-inside mb-8 text-gray-200 space-y-2">
           <li>
@@ -64,27 +64,26 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mb-4">No Collection of Personal Data</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">No Collection of Personal Data</h2>
         <p className="text-gray-200 mb-8">
-          The Bald AI application is intentionally designed to function without collecting any personal data from You.
-          All processing and analysis are conducted locally on Your Device, ensuring that Your data remains private and
-          secure. The app does not transmit any information to external servers or third parties, and no data is stored
-          or shared by the Company.
+          The Bald AI application is designed to operate without collecting any personal data from you. All processing 
+          and analysis are handled by a third-party service, with a firm guarantee that your data is deleted immediately 
+          after processing, ensuring your privacy and security. The app does not transmit any additional information to 
+          external servers or third parties, and no data is stored or shared by the company.
         </p>
         <p className="text-gray-200 mb-8">
-          By operating solely on Your Device, the Bald AI application ensures that Your personal information stays
-          within Your control. This design choice reflects our commitment to privacy and data security. Unlike many
-          applications that require internet access to function and may collect user data for various purposes, Bald AI
-          works entirely offline, giving You peace of mind that Your data is never at risk.
+          Moreover, since the application does not collect any personal data, you can use Bald AI without the need for an 
+          account or any form of registration. Your usage of the application is entirely anonymous, with no usage data or 
+          metadata tracked or recorded, ensuring that your privacy is respected and protected.
         </p>
         <p className="text-gray-200 mb-8">
-          Furthermore, since the Application does not collect any personal data, You can use Bald AI without the need
-          for an account or any form of registration. Your usage of the Application is entirely anonymous, and no usage
-          data or metadata is tracked or recorded. This approach ensures that Your privacy is fully respected and
-          protected.
+          As part of the analysis, we utilize images of the front, top, left, and right sides of your face to generate a 
+          result. This data is not collected, stored, or used for any purpose other than the analysis. All image data is 
+          stored locally on your device, and we have no access to it. This ensures that your data is never collected or 
+          stored on external servers, keeping it entirely within your control.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Security of Your Data</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Security of Your Data</h2>
         <p className="text-gray-200 mb-8">
           Although Bald AI does not collect any data, the security of any data on Your Device is of utmost importance.
           We strongly recommend that You take appropriate steps to secure Your Device, including keeping Your operating
@@ -105,7 +104,7 @@ const PrivacyPolicy = () => {
           not store personal data, these steps further enhance Your privacy and security.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Children's Privacy</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Children's Privacy</h2>
         <p className="text-gray-200 mb-8">
           Our Service is not intended for use by children under the age of 13. We do not knowingly collect personal
           information from children under 13 years of age. If You are a parent or guardian and You believe that Your
@@ -125,7 +124,7 @@ const PrivacyPolicy = () => {
           awareness about online privacy is essential in today’s digital world.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Links to Other Websites</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Links to Other Websites</h2>
         <p className="text-gray-200 mb-8">
           Our Service may contain links to other websites that are not operated by Us. If You click on a third-party
           link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of
@@ -144,7 +143,7 @@ const PrivacyPolicy = () => {
           provided in the Bald AI Application, please contact Us for more information.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Updates to This Privacy Policy</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Updates to This Privacy Policy</h2>
         <p className="text-gray-200 mb-8">
           We may update Our Privacy Policy from time to time to reflect changes in our practices, technology, legal
           requirements, or other factors. We will notify You of any changes by posting the new Privacy Policy on this
@@ -162,7 +161,7 @@ const PrivacyPolicy = () => {
           relationship with our users and ensuring that Your data remains fully under Your control.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Your Privacy Rights</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Your Privacy Rights</h2>
         <p className="text-gray-200 mb-8">
           Although Bald AI does not collect personal data, We want to ensure that You are aware of Your privacy rights.
           Under certain data protection laws, including the General Data Protection Regulation (GDPR) in Europe, You
@@ -182,7 +181,7 @@ const PrivacyPolicy = () => {
           respect the privacy rights granted to individuals under various legal frameworks.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">International Users</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">International Users</h2>
         <p className="text-gray-200 mb-8">
           Bald AI is operated from Ontario, Canada, and is intended for use by users located globally. If You are
           accessing or using the Service from outside Canada, please be aware that Your information will not be
@@ -201,7 +200,7 @@ const PrivacyPolicy = () => {
           all users, regardless of their location.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Legal Disclaimer</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Legal Disclaimer</h2>
         <p className="text-gray-200 mb-8">
           While We strive to protect Your privacy and maintain a secure environment, it is important to understand that
           no method of transmission over the Internet or method of electronic storage is completely secure. Although Bald
@@ -222,7 +221,7 @@ const PrivacyPolicy = () => {
           no-data-collection policy to safeguard Your information.
         </p>
 
-        <h2 className="text-2xl font-semibold mb-4">Contact Us</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Contact Us</h2>
         <p className="text-gray-200 mb-4">If you have any questions about the Privacy Policy, You can contact us by email at &nbsp;
             <a href="mailto:baldaiapp@gmail.com" className="text-blue-500 underline">baldaiapp@gmail.com</a>
         </p>
