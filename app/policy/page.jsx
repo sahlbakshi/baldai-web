@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
         <h2 className="text-white text-2xl font-semibold mb-4">No Collection of Personal Data</h2>
         <p className="text-gray-200 mb-8">
           The Bald AI application is designed to operate without collecting any personal data from you. All processing 
-          and analysis are conducted by OpenAI, ensuring that your data is deleted immediately after processing, safeguarding 
+          and analysis are conducted by OpenAI with a firm guarantee that the data is deleted immediately after processing, safeguarding 
           your privacy. Data is shared with this third party solely to obtain analysis results. The app does not transmit any 
           additional information to external servers or third parties, and no data is stored or shared by the company.
         </p>
