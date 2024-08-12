@@ -198,14 +198,14 @@ const TermsAndConditions = () => {
 
         <h2 className="text-white text-2xl font-semibold mb-4">Severability and Waiver</h2>
 
-        <h3 className="text-xl font-semibold mb-2">Severability</h3>
+        <h3 className="text-xl text-white font-semibold mb-2">Severability</h3>
         <p className="text-gray-200 mb-8">
           If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and
           interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable
           law and the remaining provisions will continue in full force and effect.
         </p>
 
-        <h3 className="text-xl font-semibold mb-2">Waiver</h3>
+        <h3 className="text-xl text-white font-semibold mb-2">Waiver</h3>
         <p className="text-gray-200 mb-8">
           Except as provided herein, the failure to exercise a right or to require performance of an obligation under
           these Terms shall not affect a party's ability to exercise such a right or require such performance at any time
