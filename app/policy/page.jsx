@@ -5,7 +5,7 @@ const PrivacyPolicy = () => {
     <div className="flex justify-center items-center min-h-screen p-4 bg-black">
       <div className="p-8 rounded-lg shadow-lg w-full max-w-4xl bg-black">
         <h1 className="text-white text-3xl font-bold mb-4 text-center">Privacy Policy</h1>
-        <p className="text-gray-200 mb-6 text-center">Last updated: August 12, 2024</p>
+        <p className="text-gray-200 mb-6 text-center">Last updated: October 5, 2024</p>
 
         <p className="text-gray-200 mb-8">
           This Privacy Policy outlines the policies and procedures of Bald AI regarding the collection, use, and
@@ -64,12 +64,18 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">No Collection of Personal Data</h2>
+        <h2 className="text-white text-2xl font-semibold mb-4">Collection of Personal Data</h2>
         <p className="text-gray-200 mb-8">
-          The Bald AI application is designed to operate without collecting any personal data from you. All processing 
-          and analysis are conducted by OpenAI with a firm guarantee that the data is deleted immediately after processing, safeguarding 
-          your privacy. Data is shared with this third party solely to obtain analysis results. The app does not transmit any 
-          additional information to external servers or third parties, and no data is stored or shared by the company.
+          The Bald AI application is designed to respect your privacy by operating with minimal data collection. While the app 
+          does not regularly collect personal information, it does collect the first scan you provide to help train and improve 
+          our AI model. This includes images of the front, top, left, and right sides of your face, used solely for this purpose. 
+          By using the app, you agree to the collection and use of your first scan in accordance with our Terms and Conditions.
+        </p>
+        <p className="text-gray-200 mb-8">
+          All other scans and analyses are conducted by OpenAI, with a firm guarantee that the data is deleted immediately after 
+          processing, safeguarding your privacy. Data is shared with this third party solely to obtain analysis results. The app 
+          does not transmit any additional information to external servers or third parties, and no data is stored or shared by 
+          the company apart from the initial scan.
         </p>
         <p className="text-gray-200 mb-8">
           Moreover, since the application does not collect any personal data, you can use Bald AI without the need for an 
