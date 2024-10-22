@@ -2,63 +2,70 @@ import React from 'react'
 
 const TermsAndConditions = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen p-4 bg-black">
-      <div className="p-8 rounded-lg shadow-lg w-full max-w-4xl bg-black">
-        <h1 className="text-white text-3xl font-bold mb-4 text-center">Terms and Conditions</h1>
-        <p className="text-gray-200 mb-6 text-center">Last updated: August 12, 2024</p>
+    <div className="flex justify-center items-center min-h-screen p-4 bg-[#0A0A0A]">
+      <div className="p-8 rounded-lg shadow-lg w-full max-w-3xl bg-[#0A0A0A]">
+        <div className='mb-14'>
+          <p className="text-gray-200 mb-4 text-center">Updated: October 20, 2024</p>
+          <h1 className="text-white text-3xl md:text-6xl font-regular text-center">Terms and Conditions</h1>
+        </div>
 
-        <h2 className="text-white text-2xl font-semibold mb-2">Interpretation</h2>
+        <p className="text-gray-200 mb-8">
+          These Terms and Conditions outline the rules and regulations for the use of Hairloss AI's Application. 
+          By accessing this application, we assume you accept these Terms and Conditions in full. Do not continue to use
+          Hairloss AI's Application if you do not accept all of the Terms and Conditions stated on this page.
+        </p>
+
+        <h2 className="text-white text-2xl font-regular mb-2">Interpretation</h2>
         <p className="text-gray-200 mb-8">
           Words with capitalized initial letters have meanings defined under the following conditions. These
           definitions shall have the same meaning regardless of whether they appear in singular or in plural.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-2">Definitions</h2>
-        <p className="text-gray-200 mb-4">For the purposes of these Terms and Conditions:</p>
-        <ul className="list-disc list-inside mb-8 text-gray-200 space-y-2">
+        <h2 className="text-white text-2xl font-regular mb-2">Definitions</h2>
+        <ul className="list-none list-inside mb-8 text-gray-200 space-y-2">
           <li>
-            <strong>Application</strong> refers to the software program provided by the Company, named Bald AI, that You
+            <strong>Application</strong> – refers to the software program provided by the Company, named Hairloss AI, that You
             downloaded on any electronic device.
           </li>
           <li>
-            <strong>Application Store</strong> refers to the digital distribution service operated by Apple Inc. (Apple
+            <strong>Application Store</strong> – refers to the digital distribution service operated by Apple Inc. (Apple
             App Store) or Google Inc. (Google Play Store) where the Application has been downloaded.
           </li>
           <li>
-            <strong>Affiliate</strong> means an entity that controls, is controlled by, or is under common control with
+            <strong>Affiliate</strong> – means an entity that controls, is controlled by, or is under common control with
             a party, where "control" refers to ownership of 50% or more of the shares, equity interest, or other
             securities entitled to vote for the election of directors or other managing authority.
           </li>
           <li>
-            <strong>Country</strong> refers to Ontario, Canada.
+            <strong>Country</strong> – refers to Ontario, Canada.
           </li>
           <li>
-            <strong>Company</strong> (referred to as "the Company", "We", "Us", or "Our" in this Agreement) refers to
-            Bald AI.
+            <strong>Company</strong> – (referred to as "the Company", "We", "Us", or "Our" in this Agreement) refers to
+            Hairloss AI.
           </li>
           <li>
-            <strong>Device</strong> refers to any device that can access the Service, such as a computer, cellphone, or
+            <strong>Device</strong> – refers to any device that can access the Service, such as a computer, cellphone, or
             digital tablet.
           </li>
           <li>
-            <strong>Service</strong> refers to the Application.
+            <strong>Service</strong> – refers to the Application.
           </li>
           <li>
-            <strong>Terms and Conditions</strong> (also referred to as "Terms") mean these Terms and Conditions that
+            <strong>Terms and Conditions</strong> – (also referred to as "Terms") mean these Terms and Conditions that
             constitute the entire agreement between You and the Company regarding the use of the Service.
           </li>
           <li>
-            <strong>Third-party Social Media Service</strong> refers to any services or content (including data,
+            <strong>Third-party Social Media Service</strong> – refers to any services or content (including data,
             information, products, or services) provided by a third party that may be displayed, included, or made
             available by the Service.
           </li>
           <li>
-            <strong>You</strong> refers to the individual accessing or using the Service, or the company or other legal
+            <strong>You</strong> – refers to the individual accessing or using the Service, or the company or other legal
             entity on behalf of which such individual is accessing or using the Service, as applicable.
           </li>
         </ul>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Acknowledgment</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Acknowledgment</h2>
         <p className="text-gray-200 mb-8">
           These Terms and Conditions govern the use of this Service and constitute the agreement that operates between
           You and the Company. They set out the rights and obligations of all users regarding the use of the Service.
@@ -69,10 +76,8 @@ const TermsAndConditions = () => {
         </p>
         <p className="text-gray-200 mb-8">
           By accessing or using the Service, You agree to be bound by these Terms and Conditions. If You disagree with
-          any part of these Terms, You may not access the Service.
-        </p>
-        <p className="text-gray-200 mb-8">
-          You represent that you are over the age of 18. The Company does not permit those under 18 to use the Service.
+          any part of these Terms, You may not access the Service. You represent that you are over the age of 17. 
+          The Company does not permit those under 17 to use the Service.
         </p>
         <p className="text-gray-200 mb-8">
           Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the
@@ -82,7 +87,7 @@ const TermsAndConditions = () => {
           Service.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">In-App Subscriptions</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">In-App Subscriptions</h2>
         <p className="text-gray-200 mb-8">
           The Application offers in-app subscriptions that provide access to premium features and content. These
           subscriptions may be available on a weekly, monthly, or annual basis. Payment will be charged to Your Apple ID
@@ -95,7 +100,7 @@ const TermsAndConditions = () => {
           conditions associated with the specific subscription.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Links to Other Websites</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Links to Other Websites</h2>
         <p className="text-gray-200 mb-8">
           Our Service may contain links to third-party websites or services that are not owned or controlled by the
           Company.
@@ -112,14 +117,14 @@ const TermsAndConditions = () => {
           services that You visit.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Termination</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Termination</h2>
         <p className="text-gray-200 mb-8">
           We may terminate or suspend Your access immediately, without prior notice or liability, for any reason
-          whatsoever, including without limitation if You breach these Terms and Conditions.
+          whatsoever, including without limitation if You breach these Terms and Conditions. Upon termination, 
+          Your right to use the Service will cease immediately.
         </p>
-        <p className="text-gray-200 mb-8">Upon termination, Your right to use the Service will cease immediately.</p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Limitation of Liability</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Limitation of Liability</h2>
         <p className="text-gray-200 mb-8">
           Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers
           under any provision of these Terms and Your exclusive remedy for all of the foregoing shall be limited to the
@@ -141,7 +146,7 @@ const TermsAndConditions = () => {
           party's liability will be limited to the greatest extent permitted by law.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">"AS IS" and "AS AVAILABLE" Disclaimer</h2>
         <p className="text-gray-200 mb-8">
           The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of
           any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf
@@ -170,55 +175,51 @@ const TermsAndConditions = () => {
           extent enforceable under applicable law.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Governing Law</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Governing Law</h2>
         <p className="text-gray-200 mb-8">
           The laws of Ontario, Canada, excluding its conflicts of law rules, shall govern these Terms and Your use of
           the Service. Your use of the Application may also be subject to other local, state, national, or international
           laws.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Disputes Resolution</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Disputes Resolution</h2>
         <p className="text-gray-200 mb-8">
           If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally
           by contacting the Company.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">For European Union (EU) Users</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">For European Union (EU) Users</h2>
         <p className="text-gray-200 mb-8">
           If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country
           in which You are resident.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">United States Legal Compliance</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">United States Legal Compliance</h2>
         <p className="text-gray-200 mb-8">
           You represent and warrant that (i) You are not located in a country that is subject to the United States
           government embargo, or that has been designated by the United States government as a "terrorist supporting"
           country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Severability and Waiver</h2>
-
-        <h3 className="text-xl text-white font-semibold mb-2">Severability</h3>
+        <h2 className="text-white text-2xl font-regular mb-4">Severability and Waiver</h2>
         <p className="text-gray-200 mb-8">
           If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and
           interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable
           law and the remaining provisions will continue in full force and effect.
         </p>
-
-        <h3 className="text-xl text-white font-semibold mb-2">Waiver</h3>
         <p className="text-gray-200 mb-8">
           Except as provided herein, the failure to exercise a right or to require performance of an obligation under
           these Terms shall not affect a party's ability to exercise such a right or require such performance at any time
           thereafter, nor shall the waiver of a breach constitute a waiver of any subsequent breach.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Translation Interpretation</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Translation Interpretation</h2>
         <p className="text-gray-200 mb-8">
           These Terms and Conditions may have been translated if We have made them available to You on our Service. You
           agree that the original English text shall prevail in the case of a dispute.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Changes to These Terms and Conditions</h2>
+        <h2 className="text-white text-2xl font-regular mb-4">Updates to This Terms and Conditions</h2>
         <p className="text-gray-200 mb-8">
           We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is
           material, We will make reasonable efforts to provide at least 30 days' notice before any new terms take effect.
@@ -230,8 +231,8 @@ const TermsAndConditions = () => {
           the Service.
         </p>
 
-        <h2 className="text-white text-2xl font-semibold mb-4">Contact Us</h2>
-        <p className="text-gray-200 mb-4">If you have any questions about these Terms and Conditions, You can contact us by email at &nbsp;
+        <h2 className="text-white text-2xl font-regular mb-4">Contact Us</h2>
+        <p className="text-gray-200 mb-4">If you have any questions about these Terms and Conditions, You can contact us by email at {' '}
             <a href="mailto:baldaiapp@gmail.com" className="text-blue-500 underline">baldaiapp@gmail.com</a>
         </p>
       </div>
