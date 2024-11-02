@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <main className="flex flex-col md:flex-row justify-center items-center min-h-screen gap-10 md:gap-20 p-6 font-uber bg-[#0A0A0A]">
+    <main className="flex flex-col md:flex-row justify-center items-center min-h-screen gap-10 md:gap-20 p-6 font-sfProText bg-[#0A0A0A]">
       <Image 
         className="rounded-2xl mb-10 md:mb-20" 
         src={'/logo.png'} 

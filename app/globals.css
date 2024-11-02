@@ -3,13 +3,24 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'UberMove';
-  src: url('/UberMoveText-Medium.ttf');
+  font-family: "SFProText";
+  src: url("/SF-Pro-Text-Regular.otf");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: 'UberMove';
-  src: url('/UberMoveText-Regular.ttf');
+  font-family: "SFProText";
+  src: url("/SF-Pro-Text-Medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProText";
+  src: url("/SF-Pro-Text-Bold.otf");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @layer utilities {
