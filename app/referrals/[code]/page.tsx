@@ -174,7 +174,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
   return (
     <FullHeightContainer>
       {loading ? (
-        <RouletteSpinner loading={loading} size={28} color="#000" />
+        <RouletteSpinner loading={loading} size={28} color="#FFF" />
       ) : (
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-3">
