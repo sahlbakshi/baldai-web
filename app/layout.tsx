@@ -13,7 +13,7 @@ const MaxWidthContainer = ({ children }: { children: React.ReactNode }) => (
 
 export default function RootLayout({ children }) {
   return (
-    <html className="light font-sfProText" lang="en">
+    <html className="dark font-sfProText" lang="en">
       <body className="flex flex-col min-h-screen bg-background text-foreground items-center">
         <main className="flex grow justify-center my-8 sm:my-16">
           <MaxWidthContainer>{children}</MaxWidthContainer>
