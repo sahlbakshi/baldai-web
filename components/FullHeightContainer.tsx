@@ -1,5 +1,7 @@
+import { ReactNode } from 'react'
+
 interface ContainerProps {
-  children: React.ReactNode
+  children: ReactNode
 }
 
 export default function FullHeightContainer({ children }: ContainerProps) {

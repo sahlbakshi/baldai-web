@@ -26,5 +26,3 @@ export default function Home() {
     </FullHeightContainer>
   )
 }
-
-Home.theme = "dark"
