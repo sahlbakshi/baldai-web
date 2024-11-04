@@ -15,6 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html className="dark font-sfProText" lang="en">
       <body className="flex flex-col min-h-screen bg-background text-foreground items-center">
+        <script
+          type="module"
+          src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/lineSpinner.js"
+        ></script>
         <main className="flex grow justify-center my-8 sm:my-16">
           <MaxWidthContainer>{children}</MaxWidthContainer>
         </main>
