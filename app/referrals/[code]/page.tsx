@@ -1,6 +1,5 @@
 "use client"
 
-import { RouletteSpinner } from "react-spinner-overlay"
 import { EarningsChart } from "@/components/EarningsChart"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Card } from "@/components/ui/card"
@@ -18,6 +17,7 @@ import FullHeightContainer from "@/components/FullHeightContainer"
 import { convertToLocalTime, formatEarnings } from "@/lib/helpers"
 import { Convert } from "easy-currencies"
 import dayjs from "dayjs"
+import Loader from "@/components/Loader"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || "",
@@ -174,7 +174,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
   return (
     <FullHeightContainer>
       {loading ? (
-        <RouletteSpinner loading={loading} size={28} color="#FFF" />
+        <Loader />
       ) : (
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-3">
