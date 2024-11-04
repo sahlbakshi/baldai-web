@@ -53,9 +53,9 @@ const intervals = {
 }
 
 const currencies = {
-  usd: { label: "USD", symbol: "$" },
-  cad: { label: "CAD", symbol: "$" },
-  eur: { label: "EUR", symbol: "€" },
+  usd: { code: "USD", symbol: "$" },
+  cad: { code: "CAD", symbol: "$" },
+  eur: { code: "EUR", symbol: "€" },
 }
 
 export default function ReferralPage({ params }: { params: { code: string } }) {
@@ -102,7 +102,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
         // Fetch transactions if referral code valid
         const { data: transactionResult, error: transactionErr } = await supabase
           .from("transactions")
-          .select("created_at, sale_amount")
+          .select("created_at, sale_amount, currency_code")
           .eq("referral_code", code.toUpperCase())
         if (transactionErr) {
           setError(transactionErr)
@@ -126,8 +126,8 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
         return Promise.all(
           transactions.map(async (transaction) => {
             const convertedAmount = await Convert(transaction.sale_amount)
-              .from("USD")
-              .to(selectedCurrency.label)
+              .from(transaction.currency_code)
+              .to(selectedCurrency.code)
             return {
               ...transaction,
               sale_amount: convertedAmount,
@@ -198,7 +198,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 onValueChange={(value) => {
                   setSelectedCurrency(currencies[value as keyof typeof currencies])
                 }}
-                defaultValue="usd"
+                defaultValue={currencies.usd.code.toLowerCase()}
               >
                 <SelectTrigger className="w-[160px]">
                   <SelectValue placeholder="Select currency" />
@@ -206,7 +206,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 <SelectContent>
                   {Object.entries(currencies).map(([key, currency]) => (
                     <SelectItem key={key} value={key}>
-                      {currency.label}
+                      {currency.code}
                     </SelectItem>
                   ))}
                 </SelectContent>
