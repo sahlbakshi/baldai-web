@@ -190,7 +190,13 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 <div className="flex items-center py-1 px-3.5 text-sm border border-blue-500 rounded-full text-blue-600 bg-blue-500/10">
                   {referralData.referral_code}
                 </div>
-                <div className="flex items-center py-1 px-3.5 text-sm border border-green-500 rounded-full text-green-600 bg-green-500/10">
+                <div
+                  className={`flex items-center py-1 px-3.5 text-sm border rounded-full ${
+                    referralData.is_active
+                      ? "border-green-500 text-green-600 bg-green-500/10"
+                      : "border-red-500 text-red-600 bg-red-500/10"
+                  }`}
+                >
                   {referralData.is_active ? "Active" : "Not Active"}
                 </div>
               </div>
