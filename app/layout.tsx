@@ -25,9 +25,9 @@ export default function RootLayout({ children }) {
 
         <Separator />
 
-        <div className="w-full sm:max-w-screen px-4">
+        <MaxWidthContainer>
           <Footer />
-        </div>
+        </MaxWidthContainer>
       </body>
     </html>
   )
