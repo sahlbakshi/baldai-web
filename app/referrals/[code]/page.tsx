@@ -1,6 +1,5 @@
 "use client"
 
-import { RouletteSpinner } from "react-spinner-overlay"
 import { EarningsChart } from "@/components/EarningsChart"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Card } from "@/components/ui/card"
@@ -18,6 +17,7 @@ import FullHeightContainer from "@/components/FullHeightContainer"
 import { convertToLocalTime, formatEarnings } from "@/lib/helpers"
 import { Convert } from "easy-currencies"
 import dayjs from "dayjs"
+import Loader from "@/components/Loader"
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL || "",
@@ -53,9 +53,9 @@ const intervals = {
 }
 
 const currencies = {
-  usd: { label: "USD", symbol: "$" },
-  cad: { label: "CAD", symbol: "$" },
-  eur: { label: "EUR", symbol: "€" },
+  usd: { code: "USD", symbol: "$" },
+  cad: { code: "CAD", symbol: "$" },
+  eur: { code: "EUR", symbol: "€" },
 }
 
 export default function ReferralPage({ params }: { params: { code: string } }) {
@@ -102,7 +102,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
         // Fetch transactions if referral code valid
         const { data: transactionResult, error: transactionErr } = await supabase
           .from("transactions")
-          .select("created_at, sale_amount")
+          .select("created_at, sale_amount, currency_code")
           .eq("referral_code", code.toUpperCase())
         if (transactionErr) {
           setError(transactionErr)
@@ -126,8 +126,8 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
         return Promise.all(
           transactions.map(async (transaction) => {
             const convertedAmount = await Convert(transaction.sale_amount)
-              .from("USD")
-              .to(selectedCurrency.label)
+              .from(transaction.currency_code)
+              .to(selectedCurrency.code)
             return {
               ...transaction,
               sale_amount: convertedAmount,
@@ -174,7 +174,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
   return (
     <FullHeightContainer>
       {loading ? (
-        <RouletteSpinner loading={loading} size={28} color="#FFF" />
+        <Loader />
       ) : (
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-3">
@@ -190,7 +190,13 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 <div className="flex items-center py-1 px-3.5 text-sm border border-blue-500 rounded-full text-blue-600 bg-blue-500/10">
                   {referralData.referral_code}
                 </div>
-                <div className="flex items-center py-1 px-3.5 text-sm border border-green-500 rounded-full text-green-600 bg-green-500/10">
+                <div
+                  className={`flex items-center py-1 px-3.5 text-sm border rounded-full ${
+                    referralData.is_active
+                      ? "border-green-500 text-green-600 bg-green-500/10"
+                      : "border-red-500 text-red-600 bg-red-500/10"
+                  }`}
+                >
                   {referralData.is_active ? "Active" : "Not Active"}
                 </div>
               </div>
@@ -198,7 +204,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 onValueChange={(value) => {
                   setSelectedCurrency(currencies[value as keyof typeof currencies])
                 }}
-                defaultValue="usd"
+                defaultValue={currencies.usd.code.toLowerCase()}
               >
                 <SelectTrigger className="w-[160px]">
                   <SelectValue placeholder="Select currency" />
@@ -206,7 +212,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 <SelectContent>
                   {Object.entries(currencies).map(([key, currency]) => (
                     <SelectItem key={key} value={key}>
-                      {currency.label}
+                      {currency.code}
                     </SelectItem>
                   ))}
                 </SelectContent>

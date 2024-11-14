@@ -146,7 +146,7 @@ export function processData(data, interval, period) {
   const expectedDateKeys = generateExpectedDateKeys(period)
   const completeData = fillMissingDates(filteredData, expectedDateKeys)
 
-  completeData.sort((a, b) => (dayjs(a.date).isAfter(dayjs(b.date)) ? 1 : -1))
+  completeData.sort((a, b) => (dayjs(a.date).isBefore(dayjs(b.date)) ? 1 : -1))
   return completeData
 }
 
