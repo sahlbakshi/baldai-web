@@ -4,18 +4,18 @@ const dot = <p className="mx-3">•</p>
 
 function Footer() {
   return (
-    <div className="flex flex-row my-5 justify-center text-sm">
-      <a href="/" className="hover:underline">
+    <div className="w-full flex justify-between flex-row my-5 text-sm">
+      <a href="/" className="hover:underline text-gray-300">
         © 2024 Tricho Labs
       </a>
-      {dot}
-      <a href="/policy" className="hover:underline">
-        Privacy
-      </a>
-      {dot}
-      <a href="/terms" className="hover:underline">
-        Terms
-      </a>
+      <div className="flex flex-row gap-5">
+        <a href="/policy" className="underline text-gray-300">
+          Privacy Policy
+        </a>
+        <a href="/terms" className="underline text-gray-300">
+          Terms & Conditions
+        </a>
+      </div>
     </div>
   )
 }

@@ -76,15 +76,8 @@ const PrivacyPolicy = () => {
 
         <h2 className="text-foreground text-2xl font-regular mb-4">Personal Data Collection</h2>
         <p className="text-foreground/90 mb-8">
-          The Hairloss AI application is designed to respect your privacy by operating with minimal
-          data collection. While the app does not regularly collect personal information, it does
-          collect the first scan you provide to help train and improve our AI model. This includes
-          images of the front, top, left, and right sides of your face, used solely for this
-          purpose. By using the app, you agree to the collection and use of your first scan in
-          accordance with our Terms and Conditions.
-        </p>
-        <p className="text-foreground/90 mb-8">
-          All other scans and analyses are conducted by OpenAI, with a firm guarantee that the data
+          The Hairloss AI application is designed to respect your privacy by operating with zero data collection. 
+          All scans and analyses are conducted by OpenAI and our internal ML models, with a firm guarantee that the data
           is deleted immediately after processing, safeguarding your privacy. Data is shared with
           this third party solely to obtain analysis results. The app does not transmit any
           additional information to external servers or third parties, and no data is stored or
