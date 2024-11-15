@@ -53,9 +53,9 @@ const intervals = {
 }
 
 const currencies = {
-  usd: { code: "USD", symbol: "$" },
-  cad: { code: "CAD", symbol: "$" },
-  eur: { code: "EUR", symbol: "€" },
+  usd: { code: "USD", symbol: "$", flag: "/flags/usd.png" },
+  cad: { code: "CAD", symbol: "$", flag: "/flags/cad.png" },
+  eur: { code: "EUR", symbol: "€", flag: "/flags/eur.png" },
 }
 
 export default function ReferralPage({ params }: { params: { code: string } }) {
@@ -181,15 +181,15 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
             <div className="flex flex-col gap-1">
               <h1 className="text-xl text-muted-foreground">Creator Referreal Dashboard</h1>
               <h1 className="text-4xl">
-                {referralData.first_name} {referralData.last_name}
+                {referralData.first_name} {referralData.last_name} - {referralData.referral_code}
               </h1>
             </div>
 
             <div className="flex justify-between">
               <div className="flex flex-row gap-2">
-                <div className="flex items-center py-1 px-3.5 text-sm border border-blue-500 rounded-full text-blue-600 bg-blue-500/10">
+                {/* <div className="flex items-center py-1 px-3.5 text-sm border border-blue-500 rounded-full text-blue-600 bg-blue-500/10">
                   {referralData.referral_code}
-                </div>
+                </div> */}
                 <div
                   className={`flex items-center py-1 px-3.5 text-sm border rounded-full ${
                     referralData.is_active
@@ -212,7 +212,15 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 <SelectContent>
                   {Object.entries(currencies).map(([key, currency]) => (
                     <SelectItem key={key} value={key}>
-                      {currency.code}
+                      <div className="flex flex-row gap-2">
+                        <img
+                          src={currency.flag}
+                          width={28}
+                          className="object-contain"
+                          alt={currency.code}
+                        />
+                        {currency.code}
+                      </div>
                     </SelectItem>
                   ))}
                 </SelectContent>
