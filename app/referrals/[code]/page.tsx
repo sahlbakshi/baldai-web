@@ -55,6 +55,7 @@ const intervals = {
 const currencies = {
   usd: { code: "USD", symbol: "$", flag: "/flags/usa.png" },
   cad: { code: "CAD", symbol: "$", flag: "/flags/can.png" },
+  rub: { code: "RUB", symbol: "₽", flag: "/flags/rus.png" },
   eur: { code: "EUR", symbol: "€", flag: "/flags/eur.png" },
 }
 
