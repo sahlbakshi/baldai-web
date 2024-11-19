@@ -151,6 +151,6 @@ export function processData(data, interval, period) {
 }
 
 export function formatEarnings(number: number | string) {
-  const formattedNumber = parseFloat(number.toString()).toFixed(0)
+  const formattedNumber = parseFloat(number.toString()).toFixed(2)
   return formattedNumber.replace(/\B(?=(\d{3})+(?!\d))/g, ",")
 }
