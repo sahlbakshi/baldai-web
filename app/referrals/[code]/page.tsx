@@ -109,7 +109,12 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
           setError(transactionErr)
           return
         }
-        setTransactions(transactionResult)
+        setTransactions(
+          transactionResult.map((transaction) => ({
+            ...transaction,
+            sale_amount: transaction.sale_amount * 0.7 * 0.4,
+          }))
+        )
       } catch (err) {
         setError(err)
       } finally {
