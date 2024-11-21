@@ -53,10 +53,10 @@ const intervals = {
 }
 
 const currencies = {
-  usd: { code: "USD", symbol: "$", flag: "/flags/usa.png" },
-  cad: { code: "CAD", symbol: "$", flag: "/flags/can.png" },
-  rub: { code: "RUB", symbol: "₽", flag: "/flags/rus.png" },
-  eur: { code: "EUR", symbol: "€", flag: "/flags/eur.png" },
+  usd: { code: "USD", symbol: "$" },
+  cad: { code: "CAD", symbol: "$" },
+  rub: { code: "RUB", symbol: "₽" },
+  eur: { code: "EUR", symbol: "€" },
 }
 
 export default function ReferralPage({ params }: { params: { code: string } }) {
@@ -213,15 +213,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
                 <SelectContent>
                   {Object.entries(currencies).map(([key, currency]) => (
                     <SelectItem key={key} value={key}>
-                      <div className="flex flex-row gap-2">
-                        <img
-                          src={currency.flag}
-                          width={28}
-                          className="object-contain"
-                          alt={currency.code}
-                        />
-                        {currency.code}
-                      </div>
+                      {currency.code}
                     </SelectItem>
                   ))}
                 </SelectContent>
