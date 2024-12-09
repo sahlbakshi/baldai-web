@@ -70,6 +70,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
   const [referralData, setReferralData] = useState(null)
   const [isValidReferral, setIsValidReferral] = useState(true)
   const [transactions, setTransactions] = useState(null)
+  const [usageCount, setUsageCount] = useState(0)
   const [convertedTransactions, setConvertedTransactions] = useState([])
   const [error, setError] = useState(null)
 
@@ -105,11 +106,23 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
           .from("transactions")
           .select("created_at, sale_amount, currency_code")
           .eq("referral_code", code.toUpperCase())
+        
+        // Fetch usages count if referral code valid
+        const { count: usageCount, error: usageCountErr } = await supabase
+          .from('usages')
+          .select('*', { count: 'exact', head: true })
+          .eq('referral_code', code.toUpperCase())
+
+        if (usageCountErr) {
+          setError(usageCountErr)
+          return
+        }
         if (transactionErr) {
           setError(transactionErr)
           return
         }
         setTransactions(transactionResult)
+        setUsageCount(usageCount)
       } catch (err) {
         setError(err)
       } finally {
@@ -180,7 +193,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-3">
             <div className="flex flex-col gap-1">
-              <h1 className="text-xl text-muted-foreground">Creator Referreal Dashboard</h1>
+              <h1 className="text-xl text-muted-foreground">Creator Referral Dashboard</h1>
               <h1 className="text-4xl">
                 {referralData.first_name} {referralData.last_name} - {referralData.referral_code}
               </h1>
@@ -229,20 +242,20 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Card>
               <div className="text-muted-foreground px-4 py-3">Lifetime Earnings</div>
               <Separator />
-              <div className="text-4xl px-4 py-5">
+              <div className="text-3xl px-4 py-5">
                 {selectedCurrency.symbol}
                 {formatEarnings(lifetimeEarnings)}
               </div>
             </Card>
 
             <Card>
-              <div className="text-muted-foreground px-4 py-3">Monthly Earnings - {month}</div>
+              <div className="text-muted-foreground px-4 py-3">Monthly Earnings for {month}</div>
               <Separator />
-              <div className="text-4xl px-4 py-5">
+              <div className="text-3xl px-4 py-5">
                 {selectedCurrency.symbol}
                 {formatEarnings(currentMonthEarnings)}
               </div>
@@ -251,7 +264,13 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
             <Card>
               <div className="text-muted-foreground px-4 py-3">Cashout Date</div>
               <Separator />
-              <div className="text-4xl px-4 py-5">{cashoutDate}</div>
+              <div className="text-3xl px-4 py-5">{cashoutDate}</div>
+            </Card>
+
+            <Card>
+              <div className="text-muted-foreground px-4 py-3">Usage Count</div>
+              <Separator />
+              <div className="text-3xl px-4 py-5">{usageCount}</div>
             </Card>
           </div>
 
