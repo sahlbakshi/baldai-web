@@ -77,7 +77,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
   const date = new Date()
   const month = date.toLocaleString("default", { month: "short" })
   const cashoutDate = dayjs(new Date(date.getFullYear(), date.getMonth() + 1, 1)).format(
-    "MMM D 'YY"
+    "MMM D YYYY"
   )
 
   useEffect(() => {
@@ -250,7 +250,7 @@ export default function ReferralPage({ params }: { params: { code: string } }) {
             </Card>
 
             <Card>
-              <div className="text-muted-foreground px-4 py-3">Monthly Earnings for {month}</div>
+              <div className="text-muted-foreground px-4 py-3">{month} Monthly Earnings</div>
               <Separator />
               <div className="text-3xl px-4 py-5">
                 {selectedCurrency.symbol}
